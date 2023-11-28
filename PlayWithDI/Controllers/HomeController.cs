@@ -26,8 +26,13 @@ namespace PlayWithDI.Controllers
       ViewBag.AQI = aqiService.GetAQI("Bangkok", DateTime.Now);
       return View();
     }
+        public IActionResult Contactus()
+        {
+            ViewBag.AQI = aqiService.GetAQI("Bangkok", DateTime.Now);
+            return View();
+        }
 
-    public IActionResult Privacy()
+        public IActionResult Privacy()
     {
       return View();
     }

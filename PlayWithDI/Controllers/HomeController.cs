@@ -23,16 +23,18 @@ namespace PlayWithDI.Controllers
 
     public IActionResult Index()
     {
-      ViewBag.AQI = aqiService.GetAQI("Bangkok", DateTime.Now);
+      ViewBag.AQI = aqiService.GetAQI("Japan", DateTime.Now);
+      ViewBag.City = "Japan";
       return View();
     }
-        public IActionResult Contactus()
-        {
-            ViewBag.AQI = aqiService.GetAQI("Bangkok", DateTime.Now);
-            return View();
-        }
 
-        public IActionResult Privacy()
+    public IActionResult Contactus()
+    {
+        ViewBag.AQI = aqiService.GetAQI("Bangkok", DateTime.Now);
+        return View();
+    }
+
+    public IActionResult Privacy()
     {
       return View();
     }
